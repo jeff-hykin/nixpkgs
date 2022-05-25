@@ -13977,6 +13977,7 @@ with pkgs;
     inherit (darwin) libiconv libobjc libunwind;
     inherit (darwin.apple_sdk.frameworks) Foundation;
   })
+    ruby_2_6
     ruby_2_7
     ruby_3_0
     ruby_3_1;
