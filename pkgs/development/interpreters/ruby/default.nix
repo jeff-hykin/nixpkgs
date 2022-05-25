@@ -253,10 +253,11 @@ let
 in {
   ruby_2_6 = generic {
     version = rubyVersion "2" "6" "9" "";
-    sha256 = {
-      src = "1wc1hwmz4m6iqlmqag8liyld917p6a8dvnhnpd1v8d8jl80bjm97";
-      git = "16565fyl7141hr6q6d74myhsz46lvgam8ifnacshi68vzibwjbbh";
-    };
+    # sha256 = {
+    #     url = "https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.9.tar.xz";
+    #     sha256 = "6a041d82ae6e0f02ccb1465e620d94a7196489d8a13d6018a160da42ebc1eece";
+    #   git = "16565fyl7141hr6q6d74myhsz46lvgam8ifnacshi68vzibwjbbh";
+    # };
   };
   
   ruby_2_7 = generic {
