@@ -254,10 +254,8 @@ in {
   ruby_2_6 = generic {
     version = rubyVersion "2" "6" "9" "";
     sha256 = {
-        # url = "https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.9.tar.xz";
-        # sha256 = "6a041d82ae6e0f02ccb1465e620d94a7196489d8a13d6018a160da42ebc1eece";
-      src = "1v7x5zj31zjjy73ak0m3avqxyc0kcpykk926k853xgk85vq3y8bk";
-      git = lib.fakeSha256;
+      src = lib.fakeSha256;
+      git = "1v7x5zj31zjjy73ak0m3avqxyc0kcpykk926k853xgk85vq3y8bk";
     };
   };
   
