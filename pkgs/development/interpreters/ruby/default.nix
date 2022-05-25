@@ -255,8 +255,8 @@ in {
   ruby_2_6 = generic {
     version = rubyVersion "2" "6" "9" "";
     sha256 = {
-      src = lib.fakeSha256;
-      git = lib.fakeSha256;
+      src = "1fzgn1w62y71fgan6vxfcaxwql74zb5a841p2nr9xgv4mixawyzb";
+      git = "1fzgn1w62y71fgan6vxfcaxwql74zb5a841p2nr9xgv4mixawyzb";
     };
   };
 
