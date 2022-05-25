@@ -74,9 +74,19 @@ let
 
         outputs = [ "out" ] ++ lib.optional docSupport "devdoc";
 
-        nativeBuildInputs = [ autoreconfHook bison git ]
-          ++ (op docSupport groff)
-          ++ op useBaseRuby baseRuby;
+        nativeBuildInputs =
+            [
+                autoreconfHook
+                bison
+                (
+                    # git
+                    (import (builtins.fetchTarball {
+                        url = "https://github.com/NixOS/nixpkgs/archive/141439f6f11537ee349a58aaf97a5a5fc072365c.tar.gz";
+                    }) {}).git
+                )
+            ]
+            ++ (op docSupport groff)
+            ++ op useBaseRuby baseRuby;
         buildInputs = [ autoconf ]
           ++ (op fiddleSupport libffi)
           ++ (ops cursesSupport [ ncurses readline ])
