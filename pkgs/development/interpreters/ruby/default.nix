@@ -53,7 +53,7 @@ let
           docSupport = false;
           rubygemsSupport = false;
         }
-      , useBaseRuby ? stdenv.hostPlatform != stdenv.buildPlatform || useRailsExpress
+      , useBaseRuby ? false
       }:
       stdenv.mkDerivation rec {
         pname = "ruby";
