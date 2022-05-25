@@ -74,7 +74,7 @@ let
 
         outputs = [ "out" ] ++ lib.optional docSupport "devdoc";
 
-        nativeBuildInputs = [ autoreconfHook bison ]
+        nativeBuildInputs = [ autoreconfHook bison git ]
           ++ (op docSupport groff)
           ++ op useBaseRuby baseRuby;
         buildInputs = [ autoconf ]
